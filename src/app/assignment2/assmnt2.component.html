@@ -1,0 +1,10 @@
+<h1 class="text-center">ASSIGNMENT 2</h1>
+<hr><hr><hr><hr>
+
+
+<div class="form-group">
+    <label for=""><strong>Username</strong></label>
+    <input type="text" class="form-control" [(ngModel)]="userName">
+    <p><small>Entered Username Is: </small><strong><small>{{userName}}</small></strong></p>
+    <button class="btn btn-primary" [disabled]="userName===''" (click)="userName=''">Add Server</button>
+</div>

@@ -1,0 +1,22 @@
+<h1 class="text-center">ASSIGNMENT 3</h1>
+<hr><hr><hr><hr>
+
+<button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+
+<div>
+    <p *ngIf="displayDetails"><small>Secrete password:</small><strong>TUNA</strong></p>
+</div>
+<!-- <div *ngFor="let count of clickCounts">
+    <p *ngIf="count == 1 else moreThanOne">The button was clicked 1 time</p>
+   <ng-template #moreThanOne>
+        <p 
+            [ngStyle]="{background:count>4 ? 'blue':''}"
+            [ngClass]="{white:count>4 }">The button was clicked {{count}} times</p>
+    </ng-template>
+</div> -->
+
+<div *ngFor="let log of logItems; let i = index" class="mb-1">
+    <p 
+        [ngStyle]="{background: i > 3 ?'#CBFFA9':'transparent'}"
+        [ngClass]="{white: i > 3 }">{{log}}</p>
+</div>
