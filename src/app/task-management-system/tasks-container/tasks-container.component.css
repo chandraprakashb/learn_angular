@@ -1,0 +1,6 @@
+.task-container{
+    height: 330px;
+    border: 1px solid rgb(240, 238, 238);
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}

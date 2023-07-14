@@ -1,0 +1,20 @@
+<form class="app-box mb-3" *ngIf="showCreateTaskForm; else createTaskWrapper">
+    <div class="form-group mb-3" >
+        <label for="">Task Name</label>
+        <input [ngClass]="{required:taskName.length===0}" class="form-control form-group-xl" type="text" [(ngModel)]="taskName" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group mb-2" >
+        <label for="">Task Description</label>
+        <textarea [ngClass]="{required:taskDiscription.length===0}" rows="8" class="form-control form-group-xl" type="text" [(ngModel)]="taskDiscription" [ngModelOptions]="{standalone: true}"></textarea>
+    </div>
+    <div class="text-center">
+        <button type="button" class="app-btn app-btn-success">Save Task</button>&nbsp;
+        <button type="button" class="app-btn app-btn-danger" (click)="taskFormHadler('hide')">Cancel</button>
+    </div>
+</form>
+
+<ng-template #createTaskWrapper>
+    <div class="text-center button-wrapper">
+        <button class="app-btn app-btn-success" (click)="taskFormHadler('show')">Create Task</button>
+    </div>
+</ng-template>

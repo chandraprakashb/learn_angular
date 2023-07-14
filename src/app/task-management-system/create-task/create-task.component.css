@@ -1,0 +1,10 @@
+.button-wrapper{
+    padding: 6px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+    background-color: rgb(166, 200, 218);
+}
+
+.required{
+    border-color: rgb(213, 126, 126);
+}

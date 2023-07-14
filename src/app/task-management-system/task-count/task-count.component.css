@@ -1,0 +1,33 @@
+.icon-wrapper{
+    position: relative;
+    display: flex;
+    /* height: 100px; */
+    justify-content: center;
+    align-items: center;
+    width: 42%;
+    height: 88px;
+    margin: auto;
+    background-color: rgb(122, 166, 166);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.icon-wrapper svg{
+    width: 60px;
+    height: 60px;
+}
+
+.count-wrapper{
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #ECF2FF;
+    box-shadow: 0px 4px 18px 5px rgba(0,0,0,0.4);
+}
