@@ -7,24 +7,12 @@
 
 
     <div class="col-12">
-
-        <div class="card mb-3" *ngFor="let recipe of recipes">
-            <div class="row g-0">
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">{{recipe.name}}</h5>
-                    <p class="card-text">{{recipe.description}}</p>
-                  </div>
-                </div>
-              <div class="col-md-4">
-                <img 
-                    [src]="recipe.imagePath" 
-                    alt="{{recipe.name}}"
-                    [title]="recipe.name"
-                    class="img-fluid rounded-start">
-              </div>
-            </div>
-        </div>
+      <p ></p>
+      <app-recipe-list-item 
+        *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"
+        (recipeSelected)="onRecipeSelected(recipeEl)"
+      ></app-recipe-list-item>
 
     </div>
 

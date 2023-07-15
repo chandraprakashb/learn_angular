@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app03.component.css']
 })
 export class App03Component {
+  activeLink = 'recipes';
 
+  getNavigationLink(link:string){
+    this.activeLink = link;
+  }
 }

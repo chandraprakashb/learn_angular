@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../recipe.modal';
 
 @Component({
@@ -8,7 +8,14 @@ import { Recipe } from '../recipe.modal';
 })
 export class RecipeListComponent {
   recipes:Recipe[] = [
-    new Recipe('Recipe 1','Lorem ipsum Deolre sit amet!',"https://www.washingtonpost.com/resizer/gAqD0qui8pBZT1HcvLXlpKWU1rY=/arc-anglerfish-washpost-prod-washpost/public/VRR6IGG37LD57PIPDASAGEPHEY.jpg"),
-    new Recipe('Recipe 2','Lorem ipsum Deolre sit amet!',"https://www.eatthis.com/wp-content/uploads/sites/4/2019/01/healthy-sunday-roast-chicken.jpg"),
+    new Recipe('Recipe 1','Lorem ipsum Deolre sit amet!',"https://cdn.imgbin.com/6/1/14/imgbin-recipe-cooking-chef-dish-food-cooking-Zp7NcJCQt7fhEgHNx2NyVg18r.jpg"),
+    new Recipe('Recipe 2','Lorem ipsum Deolre sit amet!',"https://cdn.imgbin.com/6/1/14/imgbin-recipe-cooking-chef-dish-food-cooking-Zp7NcJCQt7fhEgHNx2NyVg18r.jpg"),
   ];
+
+  @Output() recipeSelected = new EventEmitter<Recipe>()
+
+  onRecipeSelected(recipe:Recipe){
+    this.recipeSelected.emit(recipe);
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Ingredients } from '../../shared/ingredients.mdel';
 
 @Component({
@@ -8,8 +8,16 @@ import { Ingredients } from '../../shared/ingredients.mdel';
 })
 
 export class ShoppingEditComponent {
-  ingredients:Ingredients[] =[
-    new Ingredients('Apple',  10),
-    new Ingredients('Tomato', 10)
-  ] 
+  @Output() addIngredient = new EventEmitter<Ingredients>();
+  @ViewChild('nameIput')  nameIput:ElementRef;
+  @ViewChild('amountIput')  amountIput:ElementRef;
+
+  onAddIngredients(){
+    this.addIngredient.emit(new Ingredients(
+      this.nameIput.nativeElement.value,
+      parseInt(this.amountIput.nativeElement.value)
+      ))
+  }
+
+
 }
