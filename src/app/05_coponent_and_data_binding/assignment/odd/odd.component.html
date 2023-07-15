@@ -1,0 +1,12 @@
+<div *ngFor="let count of numberCount">
+    <span *ngIf="count % 2 !==0" 
+    [ngStyle]="{
+        background:
+        count===13 || 
+        count===15 || 
+        count===17 || 
+        count===21 || 
+        count===33 ||
+        count===41 ? 'red' :'' 
+    }"><strong>Odd:</strong> {{count}}</span>
+</div>
