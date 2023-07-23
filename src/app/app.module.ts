@@ -14,6 +14,10 @@ import { Assignment3Component } from './assignment3/assignment3.component';
 import { CourserProjectModule_03 } from './03_course_project/course-project.module';
 import { ComponentAndDataBinding } from './05_coponent_and_data_binding/component-and-databinding.module';
 import { TaskManagementSystemModule } from './task-management-system/task-management-system.module';
+import { DirectiveDeepDiveModule } from './07_directive_deep_dive/directive-deep-dive.module';
+
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { RowCssComponent } from './table/ngx-table.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ import { TaskManagementSystemModule } from './task-management-system/task-manage
     // Assingment 2
     Assignment2Component,
     Assignment3Component,
+    RowCssComponent
 
   ],
   imports: [
@@ -36,7 +41,9 @@ import { TaskManagementSystemModule } from './task-management-system/task-manage
     // Course Project Modules Modules
     CourserProjectModule_03,
     ComponentAndDataBinding,
-    TaskManagementSystemModule
+    TaskManagementSystemModule,
+    DirectiveDeepDiveModule,
+    NgxDatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
