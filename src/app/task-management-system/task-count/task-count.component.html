@@ -9,7 +9,7 @@
                 </svg>
             </span>
             <div class="count-wrapper">
-                0
+                {{taskService.allTasks.length}}
             </div>
         </div>
     </div>
@@ -21,9 +21,11 @@
                 </svg>
             </span>
             <div class="count-wrapper">
-                0
+                {{completed}}
             </div>
         </div>
+
+        <!-- In Progress -->
     </div>
     <div class="col-4">
         <div class="icon-wrapper">
@@ -34,7 +36,7 @@
                 </svg>
             </span>
             <div class="count-wrapper">
-                0
+                {{inProgress}}
             </div>
         </div>
     </div>

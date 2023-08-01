@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Task } from '../task.model';
+import { Task } from '../shared/task.model';
+import { TaskService } from '../shared/tasks.service';
 
 @Component({
   selector: 'app-task-management-system',
@@ -9,28 +10,13 @@ import { Task } from '../task.model';
 })
 
 export class TaskManagementSystemComponent {
-  allTasks:Task[] = [
-    new Task("Make a Plan", "Making a plan about what components we should create !", "none", this.generateRandomString()),
-  ];
   showTaskContainer:boolean = true;
-  onSaveTask(){
 
-  }
+  constructor(public taskService:TaskService) {}
 
   createTaskHandler(showCreateTask:any){
     if(showCreateTask) this.showTaskContainer = false;
     else this.showTaskContainer = true;
   }
 
-  generateRandomString() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-  
-    for (let i = 0; i < 10; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length);
-      result += characters.charAt(randomIndex);
-    }
-  
-    return (result).toLowerCase();
-  }
 }

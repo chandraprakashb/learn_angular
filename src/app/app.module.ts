@@ -18,6 +18,10 @@ import { DirectiveDeepDiveModule } from './07_directive_deep_dive/directive-deep
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RowCssComponent } from './table/ngx-table.component';
+import { ServiceAndDependancyInjectionModule } from './09_using_services_and_dependancy_injections/service-and-dependancy-injection.module';
+import { AccountService } from './09_using_services_and_dependancy_injections/account.service';
+import { LoggingService } from './09_using_services_and_dependancy_injections/loging.service';
+import { HandlingFormsModule } from './15_Handling_Forms_in_Angular_Apps/handling-forms.module';
 
 @NgModule({
   declarations: [
@@ -43,9 +47,11 @@ import { RowCssComponent } from './table/ngx-table.component';
     ComponentAndDataBinding,
     TaskManagementSystemModule,
     DirectiveDeepDiveModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    ServiceAndDependancyInjectionModule,
+    HandlingFormsModule
   ],
-  providers: [],
+  providers: [AccountService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

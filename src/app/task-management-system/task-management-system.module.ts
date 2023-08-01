@@ -7,6 +7,7 @@ import { TasksContainerComponent } from './tasks-container/tasks-container.compo
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { FormsModule } from '@angular/forms';
 import { TaskComponent } from './task/task.component';
+import { TaskService } from './shared/tasks.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TaskComponent } from './task/task.component';
   imports: [
     CommonModule,FormsModule
   ],
-  exports:[TaskManagementSystemComponent]
+  exports:[TaskManagementSystemComponent],
+  providers:[TaskService]
 })
 
 export class TaskManagementSystemModule { }

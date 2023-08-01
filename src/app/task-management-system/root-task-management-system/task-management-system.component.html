@@ -4,9 +4,7 @@
             <app-header></app-header>
             <app-task-count></app-task-count>
             <app-tasks-container *ngIf="showTaskContainer">
-                <p *ngFor="let task of allTasks">
-                    {{task.name}}
-                </p>
+                <app-task *ngFor="let task of taskService.allTasks;let index = index" [task]="task" [taskIndex]="index"></app-task>
             </app-tasks-container>
             <app-create-task (createTask)="createTaskHandler($event)"></app-create-task>
         </div>
